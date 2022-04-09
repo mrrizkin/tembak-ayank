@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pesanku untukmu</title>
+        <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        </style>
+    </head>
+    <body>
+        <h1>Hai Cantik!</h1>
+        <img src="https://c.tenor.com/Z8ezUHZzcLoAAAAC/love.gif" />
+        <h1>Maukah kamu menjadi pacarku?</h1>
+        <button id="btn_mau">Mau</button>
+        <button id="btn_gmau" style="position: relative">Gak Mau</button>
+        <script>
+            var mau = document.getElementById("btn_mau");
+            var gmau = document.getElementById("btn_gmau");
+
+            mau.addEventListener("click", function(e) {
+                e.preventDefault();
+                alert("I Love You!");
+            });
+
+            gmau.addEventListener("click", pindahRandom);
+
+            function pindahRandom(e) {
+                e.preventDefault();
+                var left = Math.floor(Math.random() * 300) + 1;
+                var top = Math.floor(Math.random() * 100) + 1;
+
+                gmau.style.left = left + "px";
+                gmau.style.top = top + "px";
+            }
+        </script>
+    </body>
+</html>
